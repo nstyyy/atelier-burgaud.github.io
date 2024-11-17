@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier Burgaud</title>
+    <link id="theme-link" rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <!-- En-tête -->
+    <header>
+        <h1>Atelier Burgaud</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="portes-clefs.html">Portes clé</a></li>
+                <li><a href="perles-non-personnalisees.html">Perles non personnalisées</a></li>
+                <li><a href="perles-personnalisees.html">Perles personnalisées</a></li>
+                <li><a href="contact.html">Nous contacter</a></li>
+            </ul>
+        </nav>
+    </header>   
+
+    <!-- Contenu principal -->
+    <main>
+        <h2>Bienvenue sur notre site de perles</h2>
+        <p>Découvrez nos perles de qualité, personnalisées et non personnalisées.</p>
+        <!-- Autres sections de contenu -->
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Atelier Burgaud. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Script JavaScript pour changer le thème -->
+    <script>
+        function changeTheme() {
+            // Récupérer le thème sélectionné
+            var theme = document.getElementById("theme").value;
+
+            // Changer l'attribut "href" du lien CSS pour le nouveau thème
+            document.getElementById("theme-link").setAttribute("href", "css/" + theme);
+        }
+    </script>
+
+</body>
+
+</html>

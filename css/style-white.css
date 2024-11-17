@@ -1,0 +1,288 @@
+/* Style général pour le thème blanc moderne avec accents marron/beige */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #ffffff; /* Fond blanc pur */
+    color: #4e4e4e; /* Texte gris clair pour contraste doux */
+}
+
+header {
+    background: #f1f1f1; /* Fond léger crème pour l'entête */
+    color: #4e4e4e;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #6f4f28; /* Marron doux pour le texte */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #4e4e4e;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, border-bottom 0.3s;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #6f4f28; /* Survol en marron doux */
+    border-bottom: 2px solid #6f4f28; /* Soulignement marron */
+}
+
+nav ul li a.active {
+    background: #6f4f28; /* Fond marron pour l'élément actif */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s;
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a.active:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+h2 {
+    color: #6f4f28; /* Marron doux pour les titres */
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    border-bottom: 3px solid #6f4f28;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: #f1f1f1; /* Fond léger crème pour le pied de page */
+    color: #4e4e4e;
+    margin-top: 20px;
+}
+
+/* Galerie des perles */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.item {
+    background: white;
+    border: 2px solid #6f4f28; /* Bordure marron doux */
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.item p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4e4e4e;
+    margin: 0;
+}
+
+/* Modal pour l'affichage plein écran */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.modal .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #6f4f28; /* Bouton de fermeture marron */
+    padding: 5px 10px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles spécifiques pour la page de contact */
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: left;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border: 2px solid #6f4f28; /* Bordure marron */
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #4e4e4e;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #f9f9f9; /* Fond léger pour les champs */
+    color: #4e4e4e;
+}
+
+form input[type="submit"] {
+    background-color: #6f4f28; /* Bouton marron */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #5a3d1f; /* Légèrement plus foncé au survol */
+}
+
+/* Style du sélecteur de thème (sombre et visible quel que soit le thème) */
+.theme-selector {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.theme-selector label {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: #333; /* Couleur foncée du texte pour garantir la visibilité */
+}
+
+.theme-selector select {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #333333; /* Fond sombre pour le select */
+    color: #e0e0e0; /* Texte clair pour la lisibilité */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre sombre pour un effet de profondeur */
+}
+
+/* Effet au survol du select */
+.theme-selector select:hover {
+    background-color: #444444; /* Légèrement plus clair au survol */
+    transform: scale(1.05);
+}
+
+/* Effet au focus */
+.theme-selector select:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Ombre claire au focus */
+}
+
+/* Ajustement pour le fond du select dans le thème clair (style-white.css par exemple) */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #ffffff; /* Fond blanc pur */
+    color: #4e4e4e; /* Texte gris clair pour contraste doux */
+}
+
+.theme-selector select {
+    background-color: #f1f1f1; /* Fond clair pour select dans le thème blanc */
+    color: #333; /* Texte sombre pour plus de lisibilité */
+}
+
+/* Pour les thèmes sombres */
+body.dark-theme .theme-selector label {
+    color: #e0e0e0; /* Texte clair sur fond sombre */
+}
+
+body.dark-theme .theme-selector select {
+    background-color: #444444; /* Fond sombre pour select dans le thème noir */
+    color: #f1f1f1; /* Texte clair pour lisibilité */
+}

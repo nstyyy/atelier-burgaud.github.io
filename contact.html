@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nous contacter - Atelier Burgaud</title>
+
+    <link id="theme-link" rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Atelier Burgaud</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="portes-clefs.html">Portes clé</a></li>
+                <li><a href="perles-non-personnalisees.html">Perles non personnalisées</a></li>
+                <li><a href="perles-personnalisees.html">Perles personnalisées</a></li>
+                <li><a href="contact.html" class="active">Nous contacter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Nous contacter</h2>
+        <p>Pour toute question ou commande, vous pouvez nous contacter :</p>
+        <ul class="contact-info">
+            <li><strong>Email :</strong> atelierburgaud.pro@gmail.com</li>
+            <li><strong>Téléphone :</strong> +33 06 79 42 60 74</li>
+            <li><strong>Lieu :</strong> Blagnac, France</li>
+        </ul>
+        <h3>Formulaire de contact :</h3>
+        <form action="envoyer-message.php" method="POST">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Atelier Burgaud</p>
+    </footer>
+</body>
+</html>
